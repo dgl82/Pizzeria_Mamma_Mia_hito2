@@ -26,7 +26,7 @@ const RegisterPage = () => {
       setError({ campos: true });
       return;
     }
-    if (form.password.length < 8 || form.repetido.length < 8) {
+    if (form.password.length < 6 || form.repetido.length < 6) {
       setError({ largo: true });
       return;
     }
@@ -70,7 +70,7 @@ const RegisterPage = () => {
         ) : null}
         {error.largo ? (
           <p className="error">
-            Las contraseña debe tener al menos 8 caracteres
+            La contraseña debe tener al menos 6 caracteres
           </p>
         ) : null}
         {error.correcto ? (
